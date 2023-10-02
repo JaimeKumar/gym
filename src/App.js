@@ -3,8 +3,8 @@ import './App.css';
 import axios from 'axios'
 import { useEffect } from 'react';
 
-const server = 'http://localhost:4000/'
-// const server = 'https://gym-tracker-server-8ab6.onrender.com/'
+// const server = 'http://localhost:4000/'
+const server = 'https://gym-tracker-server-8ab6.onrender.com/'
 
 export default function App() {
 
