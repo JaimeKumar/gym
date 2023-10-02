@@ -19,8 +19,6 @@
 
 .block {
   width: clamp(0px, 90vw, 500px);
-  /* min-width: 90%; */
-  /* max-width: 300px; */
   padding: 20px;
   border-radius: 6px;
   box-shadow: 0 0 10px #11111155;
@@ -40,7 +38,8 @@ button {
   border-radius: 5px;
   color: white;
   font-weight: 600;
-  padding: 3px 9px;
+  height: 25px;
+  width: 25px;
   font-size: 1.1rem;
   cursor: pointer;
 }
@@ -48,6 +47,7 @@ button {
 .submit {
   padding: 5px 25px;
   font-size: 0.8rem;
+  width: 100px;
 }
 
 h3 {
@@ -64,5 +64,5 @@ input {
 
 .newReps {
   margin: 0;
-  width: 60px;
+  width: 30px;
 }
