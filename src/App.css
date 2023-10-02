@@ -2,7 +2,7 @@
 
 * {
   padding: 0;
-  /* margin: 0; */
+  margin: 0;
   box-sizing: border-box;
 }
 
@@ -19,7 +19,7 @@
 
 .block {
   width: clamp(0px, 90vw, 500px);
-  padding: 20px;
+  padding: 15px;
   border-radius: 6px;
   box-shadow: 0 0 10px #11111155;
 }
@@ -52,6 +52,7 @@ button {
 
 h3 {
   font-size: 1.1rem;
+  margin-bottom: 10px;
 }
 
 input {
@@ -65,4 +66,15 @@ input {
 .newReps {
   margin: 0;
   width: 30px;
+}
+
+.skipButtons {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  background-color: #00000011;
+  padding: 5px 10px;
+  border-radius: 10px;
 }

@@ -41,6 +41,17 @@ export default function App() {
       })
   }
 
+  function skip(n) {
+    axios.post(`${server}movePos`, {amnt: n})
+      .then(res => {
+        console.log(res.data)
+        setData(res.data)
+      })
+      .catch((err) => {
+        console.log(err)
+      })
+  }
+
   useEffect(() => {
     getInfo();
   }, [])
@@ -50,8 +61,11 @@ export default function App() {
       {data? (
         <div className='cont'>
           <div className="block">
-            <h3>Muscle Group</h3>
-            <span>{data.part}</span>
+            <div className="skipButtons">
+              <button onClick={()=>{skip(-1)}} className="skipBack">&#8249;</button>
+              <h2>{data.part}</h2>
+              <button onClick={()=>{skip(1)}} className="skipForward">&#8250;</button>
+            </div>
             <h3>Previous Weight</h3>
             <span>{data.weight}</span>
             <h3>Reps</h3>
