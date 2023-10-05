@@ -85,7 +85,9 @@ export default function App() {
             <button className='submit' onClick={submitNew}>UPDATE</button>
           </div>
         </div>
-      ) :''}
+      ) : 
+        <div className="buffer"></div>
+      }
     </div>
   );
 }

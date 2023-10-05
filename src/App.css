@@ -79,3 +79,27 @@ input {
   padding: 5px 10px;
   border-radius: 10px;
 }
+
+.buffer { 
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-top: 2px solid #777;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  animation: bufferSpin 1s infinite ease;
+}
+
+@keyframes bufferSpin {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
