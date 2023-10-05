@@ -33,7 +33,6 @@ export default function App() {
     axios.get(`${server}getInfo`)
       .then((res) => {
         setData(res.data.cat)
-        console.log(res.data.newReps)
         setReps(res.data.newReps)
       })
       .catch((err) => {
