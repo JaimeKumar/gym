@@ -9,14 +9,6 @@ const server = 'https://gym-tracker-server-8ab6.onrender.com/'
 export default function App() {
 
   const [data, setData] = useState(null)
-  const [newReps, setReps] = useState(0)
-
-  function addRep(n) {
-    axios.post(`${server}addRep`, {amnt: n})
-      .then(res => {
-        setReps(res.data.newReps)
-      })
-  }
 
   function submitNew() {
     let data = {
@@ -33,7 +25,6 @@ export default function App() {
     axios.get(`${server}getInfo`)
       .then((res) => {
         setData(res.data.cat)
-        setReps(res.data.newReps)
       })
       .catch((err) => {
         console.log(err)
@@ -75,11 +66,12 @@ export default function App() {
             <h3>New Weight</h3>
             <input id='weight' type="number" defaultValue={data.weight} />
             <h3>Reps Today</h3>
-            <div className="row">
+            <input id='reps' type="number" />
+            {/* <div className="row">
               <button onClick={() => {addRep(-1)}}>-</button>
               <input id='reps' className='newReps' type="number" value={newReps} />
               <button onClick={() => {addRep(1)}}>+</button>
-            </div>
+            </div> */}
             <br />
             <br />
             <button className='submit' onClick={submitNew}>UPDATE</button>
